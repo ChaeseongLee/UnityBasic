@@ -26,7 +26,7 @@ public class Gacha : MonoBehaviour
         if (buttonIndex == 1)
         {
             Debug.Log("1È¸ »Ì±â ¹öÆ° Å¬¸¯µÊ");
-            randomValue = Random.Range(1, 105);
+            randomValue = Random.Range( 0, 99);
             SetGachaResult(randomValue, 0);
         }
         else if (buttonIndex == 2)
@@ -34,7 +34,7 @@ public class Gacha : MonoBehaviour
             Debug.Log("10È¸ »Ì±â ¹öÆ° Å¬¸¯µÊ");
             for (int i = 0; i < 10; i++)
             {
-                randomValue = Random.Range(1, 150);
+                randomValue = Random.Range(0, 99);
                 SetGachaResult(randomValue, i);
             }
         }
@@ -45,22 +45,22 @@ public class Gacha : MonoBehaviour
         string characterName = "²Î";
         Sprite characterSprite = null;
 
-        if (value <= 5)
+        if (value < 5)
         {
             characterName = "Eren Yeager";
             characterSprite = characterList[0];
         }
-        else if (value <= 10)
+        else if (value < 15)
         {
             characterName = "Mikasa Ackerman";
             characterSprite = characterList[1];
         }
-        else if (value <= 35)
+        else if (value < 35)
         {
             characterName = "Armin Arlert";
             characterSprite = characterList[2];
         }
-        else if (value <= 65)
+        else if (value < 60)
         {
             characterName = "Jean Kirstein";
             characterSprite = characterList[3];
